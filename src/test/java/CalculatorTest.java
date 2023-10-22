@@ -1,4 +1,7 @@
 import lesson01.Calculator;
+import org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalculatorTest {
     public static void main(String[] args) {
@@ -6,7 +9,10 @@ public class CalculatorTest {
         int firstOperand = 1;
         int secondOperand = 2;
         char operator = '+';
-       assert (9 == Calculator.calculation(firstOperand,secondOperand,operator));
+        assert (9 == Calculator.calculation(firstOperand,secondOperand,operator));
+
+        assertThat(Calculator.calculation(firstOperand,secondOperand,operator)).isEqualTo(3);
+        assertThat(Calculator.calculation(firstOperand,secondOperand,operator)).isEqualTo(9);
 
 //        firstOperand = 8;
 //        secondOperand = 0;
