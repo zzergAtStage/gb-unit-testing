@@ -1,7 +1,7 @@
 import lesson01.Calculator;
-import org.assertj.core.api.Assertions.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class CalculatorTest {
     public static void main(String[] args) {
@@ -12,19 +12,11 @@ public class CalculatorTest {
         assert (9 == Calculator.calculation(firstOperand,secondOperand,operator));
 
         assertThat(Calculator.calculation(firstOperand,secondOperand,operator)).isEqualTo(3);
-        assertThat(Calculator.calculation(firstOperand,secondOperand,operator)).isEqualTo(9);
+        assertThat(Calculator.calculation(firstOperand,secondOperand,operator)).isEqualTo(3);
 
-//        firstOperand = 8;
-//        secondOperand = 0;
-//        operator = '_';
-//
-//        try {
-//            Calculator.calculation(firstOperand,secondOperand,operator);
-//        } catch (IllegalStateException e){
-//            if (!e.getMessage().equals("Unsupported operator!")) {
-//                throw new AssertionError("Test not passed!");
-//            }
-//        }
+        assertThatThrownBy(() -> Calculator.calculation(1,0,'_'))
+                .isInstanceOf(IllegalStateException.class);
+
 
     }
 }
