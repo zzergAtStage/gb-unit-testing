@@ -1,16 +1,17 @@
 package seminars.first.shop;
 
+import lombok.Getter;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.NoSuchElementException;
 
+
+@Getter
 public class Shop {
-    private List<Product> products;
-
     // Геттеры, сеттеры:
-    public List<Product> getProducts() {
-        return products;
-    }
+    private List<Product> products;
 
     public void setProducts(List<Product> products) {
         this.products = products;
@@ -35,7 +36,9 @@ public class Shop {
     public Product getMostExpensiveProduct() {
         // Допишите реализацию метода самостоятельно
 
-        return null;
+        return this.products.stream()
+                .max(Comparator.comparing(Product::getCost))
+                .orElseThrow(NoSuchElementException::new);
     }
 
 }
