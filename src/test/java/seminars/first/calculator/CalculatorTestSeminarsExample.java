@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
-class CalculatorTest {
+class CalculatorTestSeminarsExample {
     Calculator calculator;
 
     @BeforeEach
