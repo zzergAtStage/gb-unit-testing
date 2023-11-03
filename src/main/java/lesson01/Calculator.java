@@ -3,7 +3,7 @@ package lesson01;
 public class Calculator {
     public static int calculation(int firstOperand, int
             secondOperand, char operator) {
-        int result = 0;
+        int result;
         switch (operator) {
             case '+':
                 result = firstOperand + secondOperand;
