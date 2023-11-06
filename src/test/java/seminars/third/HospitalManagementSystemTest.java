@@ -87,7 +87,8 @@ class HospitalManagementSystemTest {
 
     @Test
     void getAppointments() {
-        List<Appointment> appointmentList = new ArrayList<>(Arrays.asList(appointment));
+        List<Appointment> appointmentList = new ArrayList<>();
+        appointmentList.add(appointment);
         appointmentList.add(new Appointment(doctor2,patient1, new Date()));
         assertArrayEquals(appointmentList.toArray(), hospitalManagementSystem.getAppointments().toArray());
 
