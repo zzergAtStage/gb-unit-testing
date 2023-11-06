@@ -1,5 +1,7 @@
 package seminars.third;
 
+import java.util.Date;
+
 class Appointment {
     private Doctor doctor;
     private Patient patient;
@@ -12,14 +14,14 @@ class Appointment {
     }
 
     public Doctor getDoctor() {
-        return 0;
+        return this.doctor;
     }
 
     public Patient getPatient() {
-        return 0;
+        return this.patient;
     }
 
     public Date getDate() {
-        return 0;
+        return this.date;
     }
 }
