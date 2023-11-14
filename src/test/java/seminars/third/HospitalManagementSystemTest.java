@@ -90,8 +90,8 @@ class HospitalManagementSystemTest {
         List<Appointment> appointmentList = new ArrayList<>();
         appointmentList.add(appointment);
         appointmentList.add(new Appointment(doctor2,patient1, new Date()));
+        hospitalManagementSystem.scheduleAppointment(appointmentList.get(appointmentList.size()-1).getDoctor(), appointmentList.get(appointmentList.size()-1).getPatient(), new Date());
         assertArrayEquals(appointmentList.toArray(), hospitalManagementSystem.getAppointments().toArray());
-
     }
 
 }
