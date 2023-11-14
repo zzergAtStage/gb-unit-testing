@@ -1,6 +1,5 @@
 package seminars.fourth.hw;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -39,25 +38,25 @@ class BookTest {
     }
 
     @Test
-    void setIdShouldChangeId() {
+    void setId_ShouldChangeId() {
         book.setId("4");
         assertEquals("4", book.getId());
     }
 
     @Test
-    void setTitleShouldChangeTitle() {
+    void setTitle_ShouldChangeTitle() {
         book.setTitle("The Catcher in the Rye");
         assertEquals("The Catcher in the Rye", book.getTitle());
     }
 
     @Test
-    void setAuthorShouldChangeAuthor() {
+    void setAuthor_ShouldChangeAuthor() {
         book.setAuthor("J.D. Salinger");
         assertEquals("J.D. Salinger", book.getAuthor());
     }
 
     @Test
-    void gettersAndSettersShouldWorkCorrectly() {
+    void gettersAndSetters_ShouldWorkCorrectly() {
         // Ensure that getters and setters work correctly together
         Book anotherBook = new Book("4");
         anotherBook.setTitle("1984");
